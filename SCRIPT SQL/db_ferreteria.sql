@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS db_ferreteria;
+USE db_ferreteria;
+
+CREATE TABLE IF NOT EXISTS Clientes (
+    IdCliente INT PRIMARY KEY AUTO_INCREMENT,
+    NombreCompleto VARCHAR(100) NOT NULL,
+    Telefono VARCHAR(20) NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Direccion VARCHAR(150) NULL,
+    FechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
